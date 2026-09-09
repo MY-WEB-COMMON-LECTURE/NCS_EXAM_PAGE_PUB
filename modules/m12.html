@@ -4,39 +4,22 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>평가 자료</title>
-<style>
-:root{--navy:#2b4c7e;--ink:#111827;--mu:#6b7280;--ln:#d1d5db}
-*{box-sizing:border-box}
-body{margin:0;min-height:100vh;display:grid;place-items:center;background:#f9fafb;
-     font-family:"Malgun Gothic",sans-serif;color:var(--ink)}
-main{width:340px;background:#fff;border:1px solid #e5e7eb;border-radius:12px;
-     padding:32px 28px;box-shadow:0 1px 3px rgba(15,23,42,.06)}
-h1{margin:0;font-size:17px}
-p.s{margin:8px 0 22px;font-size:13px;color:var(--mu);line-height:1.6}
-label{display:block;font-size:12px;font-weight:700;margin-bottom:6px}
-input[type=password]{width:100%;height:40px;padding:0 12px;font-size:14px;
-     border:1px solid var(--ln);border-radius:6px;font-family:inherit}
-input[type=password]:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 1px var(--navy)}
-.k{display:flex;align-items:center;gap:7px;margin:14px 0 18px;font-size:13px;color:var(--mu)}
-button{width:100%;height:40px;border:0;border-radius:6px;background:var(--navy);color:#fff;
-     font-size:14px;font-weight:500;font-family:inherit;cursor:pointer}
-button:disabled{background:#9ca3af;cursor:default}
-.m{margin-top:14px;font-size:13px;color:#dc2626}
-</style>
+<link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
-<main id="lock" hidden>
-  <h1>평가 자료</h1>
-  <p class="s">비밀번호를 넣어야 내용이 열립니다.<br>담당 정우균</p>
-  <form id="lf">
-    <label for="lp">비밀번호</label>
-    <input id="lp" type="password" autocomplete="current-password" required>
-    <label class="k"><input id="lk" type="checkbox"> 이 브라우저에서 로그인 유지</label>
-    <button type="submit">들어가기</button>
-    <p class="m" id="lm" hidden></p>
-  </form>
-</main>
-<script type="application/json" id="pl">{"salt":"5aNlJp8I1/aHIDA2bE9bIw==","iv":"NaT/m5725Dk2wveK","ct":"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"}</script>
+<div class="top"><div class="tbar"><div class="brand"><a href="../index.html">평가 자료</a><small>담당 정우균</small></div></div></div>
+<div class="wrap">
+  <div class="gate" id="lock" hidden>
+    <form class="gbox" id="lf">
+      <h2>로그인</h2>
+      <input id="lp" type="password" placeholder="비밀번호" autocomplete="current-password" required>
+      <label class="keep"><input id="lk" type="checkbox"> 이 브라우저에서 로그인 유지</label>
+      <button type="submit">들어가기</button>
+      <p class="gmsg" id="lm"></p>
+    </form>
+  </div>
+</div>
+<script type="application/json" id="pl">{"salt":"p/lrJAF6s6dpaWUMADP9Zg==","iv":"wIP+dQiSCV+iABB0","ct":"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"}</script>
 <script src="../assets/gate.js"></script>
 </body>
 </html>

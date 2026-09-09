@@ -104,13 +104,14 @@
     for (var i = 0; i < scripts.length; i++) await runScript(scripts[i]);   // 순서대로
   }
 
-  function fail(t) { msg.textContent = t; msg.hidden = false; }
+  function fail(t) { msg.className = 'gmsg err'; msg.textContent = t; }
 
   form.addEventListener('submit', async function (e) {
     e.preventDefault();
     if (busy) return;
     busy = true;
-    msg.hidden = true;
+    msg.className = 'gmsg';
+    msg.textContent = '';
     var btn = form.querySelector('button');
     var label = btn.textContent;
     btn.textContent = '여는 중…';
